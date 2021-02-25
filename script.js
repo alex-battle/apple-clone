@@ -41,6 +41,15 @@ const leftDiagButton = document.querySelector('.bottom-z-control').addEventListe
 
 playPause()
 
+document.querySelector('.controls').addEventListener('mouseover', ()=>{
+    bool = false
+    playPause()
+})
+document.querySelector('.controls').addEventListener('mouseout', ()=>{
+    bool = true
+    playPause()
+})
+
 // End of iPhone Box
 
 
