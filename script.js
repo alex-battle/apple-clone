@@ -1,3 +1,24 @@
+// iPhone Box
+let y = 0
+const cube = document.querySelector('.cube')
+
+const playPause = () => {
+    setInterval(()=>{
+        cube.style.transform = `rotateY(${y++}deg)`
+    }, 50)
+}
+
+playPause()
+
+
+
+
+// End of iPhone Box
+
+
+
+
+
 // Slideshow 
 const slideshowDivs = () =>{
     for(let i = 1; i<= 5; i++){
