@@ -2,13 +2,19 @@
 let y = 0
 let x = 0
 let z = 0
-
+let bool = true;
+let interval;
 const cube = document.querySelector('.cube')
 
 const playPause = () => {
-    setInterval(()=>{
-        cube.style.transform = `rotateY(${y++}deg)`
+
+    if(bool){
+    interval = setInterval(()=>{
+        cube.style.transform = `rotateX(${x}deg) rotateY(${y++}deg) rotateZ(${z}deg)`
     }, 50)
+}else{
+     clearInterval(interval)
+}
 }
 
 
@@ -33,7 +39,7 @@ const leftDiagButton = document.querySelector('.bottom-z-control').addEventListe
 })
 
 
-// playPause()
+playPause()
 
 // End of iPhone Box
 
