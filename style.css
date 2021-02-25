@@ -131,6 +131,7 @@ html{
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
+    transition: opacity 5s;
 }
 
 .slideshow div.change{
