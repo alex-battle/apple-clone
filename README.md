@@ -7,3 +7,9 @@
 ## What I learned
 -how to use clip-path with CSS to create shapes. Used this twice to create the button for 'Buy Now' button in the banner for section 1.
 
+-Everything about the 3D objects was new 
+
+-using perspective to create the 3d environment.
+
+
+
