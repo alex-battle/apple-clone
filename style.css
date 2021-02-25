@@ -79,7 +79,7 @@ html{
     height: 55rem;
     background-color: red;
     transform-style: preserve-3d;
-    transform: rotateX(91deg);
+    transform: rotateY(-91deg);
 }
 
 .front-side, .back-side{
@@ -117,7 +117,6 @@ html{
     left: 0;
     transform:rotateX(90deg);
     transform-origin: bottom;
-
 }
 
 
@@ -130,6 +129,36 @@ html{
 .back-side{
     transform: translateZ(-5rem);
 }
+
+.back-side::before, .back-side::after{
+    content:"iPhone";
+    width: 10rem;
+    height:100%;
+    background-color: #fee;
+    position: absolute;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #ec1919;
+}
+
+.back-side::before{
+    top: 0;
+    left:0;
+    transform: rotateY(-90deg);
+    transform-origin: left;
+}
+
+.back-side::after{
+    top: 0;
+    right: 0;
+    transform: rotateY(90deg);
+    transform-origin: right;
+}
+
 
 .back-side i{
     font-size: 12rem;
