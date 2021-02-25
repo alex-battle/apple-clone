@@ -1,5 +1,6 @@
 // iPhone Box
 let y = 0
+let x = 0
 const cube = document.querySelector('.cube')
 
 const playPause = () => {
@@ -8,10 +9,24 @@ const playPause = () => {
     }, 50)
 }
 
-playPause()
+
+const topButton = document.querySelector('.top-x-control').addEventListener('click',()=>{
+    cube.style.transform = `rotateX(${x += 20}deg)`
+    
+})
+
+const bottomButton = document.querySelector('.bottom-x-control').addEventListener('click',()=>{
+    cube.style.transform = `rotateX(${x += -20}deg)`
+})
+const leftButton = document.querySelector('.left-y-control').addEventListener('click',()=>{
+    cube.style.transform = `rotateY(${y += -20}deg)`
+})
+const rightButton = document.querySelector('.right-y-control').addEventListener('click',()=>{
+    cube.style.transform = `rotateY(${y += 20}deg)`
+})
 
 
-
+// playPause()
 
 // End of iPhone Box
 

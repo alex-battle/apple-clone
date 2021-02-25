@@ -81,6 +81,7 @@ html{
     transform: rotateY(300deg);
     position: relative;
     top: -2rem;
+    transition: transform .5s;
 }
 
 .front-side, .back-side{
