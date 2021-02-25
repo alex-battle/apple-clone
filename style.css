@@ -21,7 +21,7 @@ html{
 
 .center{
     display: flex;
-    justify-content: cneter;
+    justify-content: center;
     align-items: center;
 }
 /* End of Common styles */
@@ -68,6 +68,62 @@ html{
     transform: scale(1.3)
 }
 /* end of Nav */
+
+/* Cube */
+.cube-wrapper{
+    perspective: 100rem;
+    /* to create 3d environment */
+}
+.cube{
+    width: 30rem;
+    height: 55rem;
+    background-color: red;
+    transform-style: preserve-3d;
+    transform: rotateX(91deg);
+}
+
+.front-side, .back-side{
+    width: 100%;
+    height: 100%;
+    background-color: #fee;
+    position:absolute;
+    transform-style: preserve-3d;
+}
+
+.front-side{
+    padding: 2.5rem;
+    transform: translateZ(5rem);
+}
+
+.front-side::before{
+    content:"";
+    width: 100%;
+    height: 10rem;
+    background-color: #fee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform:rotateX(-90deg);
+    transform-origin: top;
+}
+
+.front-side img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.back-side{
+    transform: translateZ(-5rem);
+}
+
+.back-side i{
+    font-size: 12rem;
+    color: var(--primary-color);
+    text-shadow: .1rem .1rem .2rem #aaa, -.1rem -.1rem .2rem #aaa;
+    translate: rotateY(180deg);
+}
+/* End of Cube */
 
 /* Banner */
 
