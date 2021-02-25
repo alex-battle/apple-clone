@@ -25,6 +25,12 @@ const leftButton = document.querySelector('.left-y-control').addEventListener('c
 const rightButton = document.querySelector('.right-y-control').addEventListener('click',()=>{
     cube.style.transform = `rotateX(${x}deg) rotateY(${y += 20}deg) rotateZ(${z}deg)`
 })
+const rightDiagButton = document.querySelector('.top-z-control').addEventListener('click',()=>{
+    cube.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z += 20}deg)`
+})
+const leftDiagButton = document.querySelector('.bottom-z-control').addEventListener('click',()=>{
+    cube.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z -= 20}deg)`
+})
 
 
 // playPause()
