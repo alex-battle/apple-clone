@@ -97,3 +97,18 @@ const slideshow = () => {
 
 slideshow()
 // End of Slideshow
+
+
+// Section 3
+const section3Content = document.querySelector('.section-3-content')
+
+window.addEventListener('scroll', () => {
+    if(window.pageYOffset + window.innerHeight >= section3Content.offsetTop + section3Content.offsetHeight/2){ 
+        // returns the pixels the current document has been scrolled from the top edge of the window (length of the part of the webpage that was scrolled up)
+        // console.log('Scrolled')
+        section3Content.classList.add('change')
+    }
+})
+
+
+// End of Sectiion 3
