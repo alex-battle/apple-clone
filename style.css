@@ -458,6 +458,12 @@ html{
     top: 6%;
     opacity: 0;
 }
+
+.change .loading-wrapper{
+    opacity: 1;
+    transition: opacity 1s 2s;
+}
+
 .loading{
     width: 100%;
     height: 100%;
@@ -474,6 +480,11 @@ html{
     margin-bottom: 2rem;
 }
 
+.change .loading{
+    opacity: 0;
+    transition: 1s 5s;
+}
+
 .progress-bar{
     width: 22rem;
     height: .3rem;
@@ -487,9 +498,14 @@ html{
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 0;
     height: 100%;
     background-color: var(--white-color);
+}
+
+.change .progress-bar::after{
+    width: 100%;
+    transition: width 1s 3s;
 }
 /* Section 3 Loading */
 /* Section 3 info */
@@ -498,6 +514,11 @@ html{
     width: 70rem;
     text-align: center;
     opacity: 0;
+}
+
+.change .macbook-info{
+    opacity: 1;
+    transition: opacity 1s 6s;
 }
 
 .macbook-info-heading{
