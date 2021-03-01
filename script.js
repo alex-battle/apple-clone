@@ -1,3 +1,11 @@
+// Common JS
+document.querySelectorAll('.watch-control, .controls a').forEach((control) => {
+    control.addEventListener('click', (e) => {
+        e.preventDefault()
+    })
+})
+// End of Common JS
+
 // iPhone Box
 let y = 20
 let x = 0
@@ -111,4 +119,63 @@ window.addEventListener('scroll', () => {
 })
 
 
-// End of Sectiion 3
+// End of Section 3
+// Section 4
+const watchBands = document.querySelector('.watch-bands')
+const watchCases = document.querySelector('.watch-cases')
+const watchTop = document.querySelector('.watch-top-control')
+const watchRight = document.querySelector('.watch-right-control')
+const watchBottom = document.querySelector('.watch-bottom-control')
+const watchLeft = document.querySelector('.watch-left-control')
+
+
+let axisY = 0
+let axisX = 0
+// increase/decrease by 70rem
+
+const hideControl = () => {
+    if(axisY === -280){
+        watchTop.classList.add('hideControl')
+    } else{
+        watchTop.classList.remove('hideControl')
+    }
+    if(axisY === 280){
+        watchBottom.classList.add('hideControl')
+    } else{
+        watchBottom.classList.remove('hideControl')
+    }
+    if(axisX === 280){
+        watchRight.classList.add('hideControl')
+    } else{
+        watchRight.classList.remove('hideControl')
+    }
+    if(axisX === -280){
+        watchLeft.classList.add('hideControl')
+    } else{
+        watchLeft.classList.remove('hideControl')
+    }
+}
+watchTop.addEventListener('click', () => {
+    // decrease margin top by 70rem
+    watchCases.style.marginTop = `${axisY -= 70}rem`
+    hideControl()
+})
+watchBottom.addEventListener('click', () => {
+    // increase margin top by 70rem
+    watchCases.style.marginTop = `${axisY += 70}rem`
+    hideControl()
+})
+watchRight.addEventListener('click', () => {
+    // decrease margin top by 70rem
+    watchBands.style.marginRight = `${axisX += 70}rem`
+    hideControl()
+})
+watchLeft.addEventListener('click', () => {
+    // decrease margin top by 70rem
+    watchBands.style.marginRight = `${axisX -= 70}rem`
+    hideControl()
+})
+
+
+
+// End of Section 4
