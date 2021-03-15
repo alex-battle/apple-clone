@@ -1,5 +1,7 @@
 # apple-clone
 
+Demo Link: http://alex-apple.surge.sh
+
 ## Objectives
 -Create and Customize Landing Page
 -Create Background Images Slideshow
